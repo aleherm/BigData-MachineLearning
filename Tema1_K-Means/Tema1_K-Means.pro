@@ -26,11 +26,11 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    cluster.cpp
+    Cluster.cpp
 
 HEADERS += \
         mainwindow.h \
-    cluster.h
+    Cluster.h
 
 FORMS += \
         mainwindow.ui

@@ -8,7 +8,9 @@
 #include <QKeyEvent>
 #include <QVector>
 #include <QPoint>
-#include <cluster.h>
+#include <QtMath>
+#include <Cluster.h>
+#include <float.h>
 
 namespace Ui {
 class MainWindow;
@@ -24,14 +26,20 @@ public:
 
     // members
     QVector<QPoint> points;
-    QVector<cluster> clusterPoints;
-    bool mustPrintBox;
+    QVector<Cluster> clusterPoints;
+    bool printBoundingBox;
 
     // events
-    //virtual void mousePressEvent(QMouseEvent *event) override;
+    virtual void mousePressEvent(QMouseEvent *event) override;
     virtual void keyPressEvent(QKeyEvent *event) override;
-    //virtual void paintEvent(QPaintEvent *event) override;
+    virtual void paintEvent(QPaintEvent *event) override;
 
+private:
+    double EuclidianDistance(QPoint point1, QPoint point2);
+    void DetermineCluster();
+
+private slots:
+    void on_pushButton_clicked();
 
 private:
     Ui::MainWindow *ui;

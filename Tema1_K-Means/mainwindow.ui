@@ -13,7 +13,21 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>121</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Genereaza puncte</string>
+    </property>
+   </widget>
+  </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
